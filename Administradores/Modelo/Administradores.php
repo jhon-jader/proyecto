@@ -51,13 +51,16 @@
         }
 
         public function update($Id, $Nombre, $Apellido, $Usuario, $Password, $Estado){
+
+            $Password_strnog = password_hash($Password,PASSWORD_DEFAULT);
+            
             $statement = $this->db->prepare("UPDATE usuarios SET NOMBRE = :Nombre, APELLIDO = :Apellido, USUARIO =
             :Usuario, PASSWORD = :Password, ESTADO=:Estado WHERE ID_USUARIO = :Id");
             $statement->bindParam(':Id',$Id);
             $statement->bindParam(':Nombre',$Nombre);
             $statement->bindParam(':Apellido',$Apellido);
             $statement->bindParam(':Usuario',$Usuario);
-            $statement->bindParam(':Password',$Password);
+            $statement->bindParam(':Password',$Password_strnog);
             $statement->bindParam(':Estado',$Estado);
             if ($statement->execute()) {
                 header('Location: ../Pages/index.php');
@@ -77,5 +80,4 @@
             
         }
     }
-
 ?>

@@ -10,15 +10,16 @@
         }
 
         public function login($Usuario,$Password){
-            $statement=$this->db->prepare("SELECT * FROM usuarios WHERE USUARIO = :usuario AND PASSWORD = :password");
+            $statement=$this->db->prepare("SELECT * FROM usuarios WHERE USUARIO = :usuario ");
             $statement->bindparam(':usuario', $Usuario);
-            $statement->bindparam(':password', $Password);
             $statement->execute();
             if ($statement->rowCount()==1) {
                 $result =$statement->fetch();
-                $_SESSION['NOMBRE'] = $result['NOMBRE'] . " " . $result['APELLIDO'];
-                $_SESSION['ID']= $result['ID_USUARIO'];
-                $_SESSION['PERFIL'] = $result['PERFIL'];
+                if (password_verify($Password,$result['PASSWORD'])) {
+                    $_SESSION['NOMBRE'] = $result['NOMBRE'] . " " . $result['APELLIDO'];
+                    $_SESSION['ID']= $result['ID_USUARIO'];
+                    $_SESSION['PERFIL'] = $result['PERFIL'];
+                }
 
                 return true;
                 
@@ -62,4 +63,4 @@
             header('Location: ../../index.php');
         }
     }
-?>    
+?>
