@@ -6,8 +6,8 @@ class Conexion{
     private $drive ="mysql";
     private $host ="localhost";
     private $bd = "notas";
-    private $usuario ="root";
-    private $contrasena = "";
+    private $usuario ="adminProycto1";
+    private $contrasena = "adminProycto1";
 
     public function __construct(){
         try {
