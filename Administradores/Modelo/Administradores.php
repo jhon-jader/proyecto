@@ -11,12 +11,15 @@
         // VALUES (NULL, 'Jhon', 'Rojas', 'jhonjader', '123', 'Administrador', 'Activo');
 
         public function add($Nombre, $Apellido, $Usuario, $Password){
+
+            $Password_strnog = password_hash($Password,PASSWORD_DEFAULT);
+
             $statement = $this->db->prepare("INSERT INTO usuarios (NOMBRE, APELLIDO, USUARIO, PASSWORD, PERFIL, 
             ESTADO) VALUES (:Nombre, :Apellido, :Usuario, :Password, 'Administrador' , 'Activo' )");
             $statement->bindParam(':Nombre',$Nombre);
             $statement->bindParam(':Apellido',$Apellido);
             $statement->bindParam(':Usuario',$Usuario);
-            $statement->bindParam(':Password',$Password);
+            $statement->bindParam(':Password',$Password_strnog);
             if ($statement->execute()) {
                 header('Location: ../Pages/index.php');
             }else {
