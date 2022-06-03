@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-08-2021 a las 08:58:59
+-- Tiempo de generación: 03-06-2022 a las 21:54:51
 -- Versión del servidor: 10.4.20-MariaDB
 -- Versión de PHP: 8.0.8
 
@@ -80,7 +80,7 @@ CREATE TABLE `usuarios` (
   `NOMBRE` varchar(60) NOT NULL,
   `APELLIDO` varchar(60) NOT NULL,
   `USUARIO` varchar(40) NOT NULL,
-  `PASSWORD` varchar(80) NOT NULL,
+  `PASSWORD` varchar(225) NOT NULL,
   `PERFIL` varchar(30) NOT NULL,
   `ESTADO` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -90,9 +90,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`ID_USUARIO`, `NOMBRE`, `APELLIDO`, `USUARIO`, `PASSWORD`, `PERFIL`, `ESTADO`) VALUES
-(1, 'Diego', 'Palacio', 'dpala1123', '123', 'Administrador', 'Activo'),
-(2, 'Stiven', 'Roggers', 'strr42', '321', 'Docente', 'Activo'),
-(3, 'Jhon', 'Rojas', 'jhonjader', '123', 'Administrador', 'Activo');
+(2, 'Stiven', 'Roggers', 'stivenro', '$2y$10$0bKb2ogvj.W27R.2NnFjmOjk9Q8RcZo8U.wyLTc1RUJXXEWAys6UK', 'Docente', 'Activo'),
+(3, 'Jhon', 'Rojas', 'jhonjader', '$2y$10$vtaPFYsSepbjbfHZGY1ZAORl/GfgM93VmIikexEAScLElfuNcXYYC', 'Administrador', 'Activo');
 
 --
 -- Índices para tablas volcadas
@@ -124,19 +123,19 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `estudiantes`
 --
 ALTER TABLE `estudiantes`
-  MODIFY `ID_ESTUDIANTE` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ID_ESTUDIANTE` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `materias`
 --
 ALTER TABLE `materias`
-  MODIFY `ID_MATERIA` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID_MATERIA` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `ID_USUARIO` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID_USUARIO` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
