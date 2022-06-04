@@ -1,5 +1,5 @@
 # proyecto
-CRUD:
+CRUD: sistema de notas
 
 lenjuaje:
 PHP
