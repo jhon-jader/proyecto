@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-//$_SESSION["token"] = bin2hex(random_bytes(32));
 $token = bin2hex(random_bytes(32));
 $_SESSION["token"] = $token;
 ?>
@@ -9,6 +8,8 @@ $_SESSION["token"] = $token;
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; frame-src 'self';worker-src 'self' ">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
