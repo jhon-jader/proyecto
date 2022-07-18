@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+//$_SESSION["token"] = bin2hex(random_bytes(32));
+$token = bin2hex(random_bytes(32));
+$_SESSION["token"] = $token;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +18,7 @@
     <h1>Inicio de Sesión</h1>
     <form method="POST" action="Usuarios\Controladores\Login.php">
         Usuarios <br>
+        <input type="hidden" name="token" value="<?php echo $token; ?>"/>
         <input type="text" name= "Usuario" required= "" autocomplete= "off" placeholder= "Usuario"> <br><br>
         Contraseña <br>
         <input type="password" name= "Contrasena" required= "" autocomplete= "off" placeholder= "Contraseña"><br><br>

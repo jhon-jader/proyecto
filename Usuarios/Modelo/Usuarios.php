@@ -2,7 +2,7 @@
 
     require_once('../../Conexion.php');
     session_start();
-
+    
 
     class Usuarios extends Conexion{
         public function __construct(){
@@ -15,7 +15,7 @@
             $statement->execute();
             if ($statement->rowCount()==1) {
                 $result =$statement->fetch();
-                if (password_verify($Password,$result['PASSWORD'])) {
+                if (password_verify($Password,$result['PASSWORD'])&& $_POST["token"] == $_SESSION["token"]) {
                     $_SESSION['NOMBRE'] = $result['NOMBRE'] . " " . $result['APELLIDO'];
                     $_SESSION['ID']= $result['ID_USUARIO'];
                     $_SESSION['PERFIL'] = $result['PERFIL'];
