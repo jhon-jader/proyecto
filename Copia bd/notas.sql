@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-06-2022 a las 21:54:51
+-- Tiempo de generación: 21-07-2022 a las 17:47:46
 -- Versión del servidor: 10.4.20-MariaDB
 -- Versión de PHP: 8.0.8
 
@@ -91,7 +91,8 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`ID_USUARIO`, `NOMBRE`, `APELLIDO`, `USUARIO`, `PASSWORD`, `PERFIL`, `ESTADO`) VALUES
 (2, 'Stiven', 'Roggers', 'stivenro', '$2y$10$0bKb2ogvj.W27R.2NnFjmOjk9Q8RcZo8U.wyLTc1RUJXXEWAys6UK', 'Docente', 'Activo'),
-(3, 'Jhon', 'Rojas', 'jhonjader', '$2y$10$vtaPFYsSepbjbfHZGY1ZAORl/GfgM93VmIikexEAScLElfuNcXYYC', 'Administrador', 'Activo');
+(3, 'Jhon', 'Rojas', 'jhonjader', '$2y$10$Hu32jT2HvJASJyY92Us54eIAEa1nzes7GBrdNcYlBTI88U31IvOyK', 'Administrador', 'Activo'),
+(8, 'carlos', 'carranza', 'caraca', '$2y$10$0/Jvq0FlUMoK.lgVDacihOeO90Cmasq3MHmm76wEPCX.wMCT9.cRK', 'Administrador', 'Activo');
 
 --
 -- Índices para tablas volcadas
@@ -123,7 +124,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `estudiantes`
 --
 ALTER TABLE `estudiantes`
-  MODIFY `ID_ESTUDIANTE` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `ID_ESTUDIANTE` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `materias`
@@ -135,7 +136,7 @@ ALTER TABLE `materias`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `ID_USUARIO` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID_USUARIO` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
