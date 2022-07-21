@@ -8,7 +8,7 @@ $_SESSION["token"] = $token;
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Security-Policy" content="base-uri 'self'; connect-src 'self'; default-src 'self'; font-src 'self'; frame-src 'self'; img-src 'self'; manifest-src 'self'; media-src 'self'; object-src 'none'; report-uri https://62d964c5e7a4e344fdd767b0.endpoint.csper.io/; script-src 'report-sample' 'self'; style-src 'report-sample' 'self'; worker-src 'none';">
+    <meta http-equiv="Content-Security-Policy" content="base-uri 'self'; connect-src 'self'; default-src 'self'; font-src 'self'; frame-src 'self'; img-src 'self'; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'report-sample' 'self'; style-src 'report-sample' 'self'; worker-src 'none';">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
