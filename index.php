@@ -16,7 +16,8 @@ $_SESSION["token"] = $token;
     <title>Sistema de Notas</title>
 </head>
 <body>
-    <h1>Inicio de Sesión</h1>
+<h2>Identificar si se hacen los cambios</h2>
+    <h1>Inicio de Sesión janajhs</h1>
     <form method="POST" action="Usuarios\Controladores\Login.php">
         Usuarios <br>
         <input type="hidden" name="token" value="<?php echo $token; ?>"/>
