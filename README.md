@@ -1,4 +1,7 @@
 # proyecto
+
+MVC
+
 CRUD: sistema de notas
 
 lenjuaje:
